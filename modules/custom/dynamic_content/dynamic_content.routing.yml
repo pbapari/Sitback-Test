@@ -1,0 +1,8 @@
+dynamic_content.routing:
+    path: '/change/content/{dynamic_content}'
+    defaults:
+        _controller: '\Drupal\dynamic_content\Controller\DynamicContent::changeContent'
+        _title: 'Change Content'
+        dynamic_content: 'World'
+    requirements:
+        _permission: 'access content'

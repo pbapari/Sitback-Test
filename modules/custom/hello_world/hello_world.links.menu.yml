@@ -1,0 +1,7 @@
+hello_world.links.menu:
+    title: 'Hello World'
+    description: 'My first menu'
+    route_name: hello_world.routing
+    parent: main
+    menu_name: main
+    weight: 1

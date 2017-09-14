@@ -1,0 +1,13 @@
+hello_world.routing:
+    path: '/hello/world'
+    defaults:
+        _controller: '\Drupal\hello_world\Controller\HelloWorldController::hello'
+    requirements:
+        _permission: 'access content'
+        
+hello_world.form:
+    path: '/admin/config/hello/world'
+    defaults:
+        _form: '\Drupal\hello_world\Form\HelloWorldConfig'
+    requirements:
+        _permission: 'administer site configuration'

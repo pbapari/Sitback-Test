@@ -1,0 +1,15 @@
+/**
+ * This file will be overwritten when the Bootstrap Framework source files
+ * are compiled using the LESS CSS pre-processor.
+ */
+
+.credit_card_voucher_link_block{
+    float: left;
+    margin-top: 30px;
+}
+.credit_card_block, .voucher_block{
+    float: right;
+}
+.voucher_block{
+    display: none;
+}

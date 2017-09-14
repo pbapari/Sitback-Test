@@ -1,0 +1,7 @@
+custom_modal.routing:
+    path: '/modal-example/modal'
+    defaults:
+        _title: 'Modalx'
+        _controller: '\Drupal\custom_modal\Controller\CustomModalController::modal'
+    requirements:
+        _permission: 'access content' 

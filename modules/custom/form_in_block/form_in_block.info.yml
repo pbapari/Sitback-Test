@@ -1,0 +1,6 @@
+name: Form in block
+type: module
+description: Form in block
+package: Custom
+version: 1.0
+core: 8.x

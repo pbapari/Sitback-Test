@@ -1,0 +1,6 @@
+name: Dynamic content
+type: module
+description: dynamic content
+package: Custom
+version: 1.0
+core: 8.x

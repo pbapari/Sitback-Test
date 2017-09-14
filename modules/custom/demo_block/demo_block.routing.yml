@@ -1,0 +1,8 @@
+demo_block.routing:
+    path: '/demo/form'
+    defaults:
+        _form: '\Drupal\demo_block\Form\DemoForm'
+        _title: 'Demo Form'
+    requirements:
+        _permission: 'administer site configuration'
+        

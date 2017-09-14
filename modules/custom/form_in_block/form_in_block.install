@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the form_in_block module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function form_in_block_schema() {
+  $schema = array();
+
+  $schema['credit_card'] = array(
+    'description' => 'credit card form',
+    'fields' => array(
+      'cid' => array(
+        'description' => 'The unique ID for credit card',
+        'type' => 'serial',
+        'size' => 'small',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'Name of the credit card holder',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'card' => array(
+        'description' => 'Credit card number',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'cvv' => array(
+        'description' => 'CVV number',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('cid'),
+  );
+
+  $schema['voucher'] = array(
+    'description' => 'Voucher form',
+    'fields' => array(
+      'vid' => array(
+        'description' => 'The unique ID for voucher',
+        'type' => 'serial',
+        'size' => 'small',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'Name of the voucher',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'voucher_number' => array(
+        'description' => 'Voucher number',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('vid'),
+  );
+
+  return $schema;
+}

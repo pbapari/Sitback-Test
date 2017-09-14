@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_page_alter()
+ */
+
+function hello_world_form_alter(&$form, $form_state, $form_id){
+  
+  $user = \Drupal::currentUser();
+  $uid = \Drupal::currentUser()->id();
+  $roles = $user->getRoles();
+  
+  if($form_id == 'search_block_form'){
+    $form['test_text'] = array(
+      '#markup' => '<div>HELLO POLU</div>',
+      '#weight' => 1,
+    );
+  }
+}
